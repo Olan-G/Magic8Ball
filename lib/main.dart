@@ -1,3 +1,9 @@
+/*
+    John Olan S. Gomez
+    Software Engineer Intern
+    Boss Level Challenge 1
+    January 26, 2024
+ */
 import 'package:flutter/material.dart';
 import 'dart:math';
 
