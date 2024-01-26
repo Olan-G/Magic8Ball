@@ -21,15 +21,25 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        child: TextButton(
-            onPressed: () {
-              setState(() {
-                ballNumber = Random().nextInt(5) + 1;
-                print(ballNumber);
-              });
-            },
-            child: Image.asset('images/ball$ballNumber.png')),
+      child: Column(
+        children: <Widget>[
+          Container(
+            child: Image.asset('images/banner.gif'),
+          ),
+          Expanded(
+            child: TextButton(
+                onPressed: () {
+                  setState(() {
+                    ballNumber = Random().nextInt(5) + 1;
+                    print(ballNumber);
+                  });
+                },
+                child: Image.asset('images/ball$ballNumber.png')),
+          ),
+          Container(
+            child: Image.asset('images/banner.gif'),
+          ),
+        ],
       ),
     );
   }
@@ -41,7 +51,7 @@ class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[400],
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -49,7 +59,7 @@ class BallPage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.indigo[900],
       ),
       body: Ball(),
     );
